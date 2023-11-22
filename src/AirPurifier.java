@@ -7,7 +7,7 @@ public class AirPurifier {
     String Mode = "Balance";
     double PowerCons;
     double[] Dimension;
-    private int CurrentSpeed = 0,CurrentPM;
+    int CurrentSpeed = 0,CurrentPM;
     boolean Power = false;
     static int[] ModelCount = new int[]{0,0,0,0};
     static String[] ModelType = new String[]{"lit","Pro","Pro Max","Pro Max Plus"};
