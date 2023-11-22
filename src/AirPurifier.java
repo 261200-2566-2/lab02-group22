@@ -13,13 +13,14 @@ public class AirPurifier {
     static String[] ModelType = new String[]{"lit","Pro","Pro Max","Pro Max Plus"};
     public void TurnOn(){
         Power = true;
+        System.out.println("Power : ON");
         switch (Mode){
             case "Safety" : SetSpeed(50);
             case "Balance" : SetSpeed(75);
             case "High-performance" : SetSpeed(100);
         }
     }
-    public void TurnOff(){ Power = false; SetSpeed(0); }
+    public void TurnOff(){ Power = false; SetSpeed(0); System.out.println("Power : OFF");}
     public void SetSpeed(int Speed){ CurrentSpeed = Speed; }
     public void setMode(String mode) {
         Mode = mode;
@@ -51,6 +52,7 @@ public class AirPurifier {
             case "Pro Max" : ModelCount[0]++;
             case "Pro Max Plus" : ModelCount[1]++;
         }
+        System.out.println("Power : OFF");
     }
     public String getMode() {
         return Mode;
