@@ -3,7 +3,7 @@
 public class AirPurifier {
     String SerialNo,Brand,Model,Color;
     String Mode = "Balance";
-    int CurrentSpeed = 0;
+    int CurrentSpeed = 0,CurrentPM;
     double PowerCons;
     double[] Dimension;
     boolean power = false;
@@ -15,10 +15,11 @@ public class AirPurifier {
         Mode = mode;
     }
 
-    public int GetPM(){
-        return 1;
+    public int getCurrentPM() {
+        return CurrentPM;
     }
-    public AirPurifier(String Model,String Brand,String SerialNo,String Color,double PowerCons,double[] Dimension){
+
+    public AirPurifier(String Model, String Brand, String SerialNo, String Color, double PowerCons, double[] Dimension){
         this.Model = Model;
         this.Brand = Brand;
         this.SerialNo = SerialNo;
