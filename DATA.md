@@ -31,17 +31,18 @@ what should be class methods?
 what's needed as inputs?
 what's to be returned?
 
+
 turnON() : void
-ไม่ได้รับ input และทำการเปลี่ยนค่า power เป็น true เมื่อ power นั้นปิดอยู่ และไม่มี return ค่า
+ไม่ได้รับ input และทำการเปลี่ยนค่า power เป็น true และเปลี่ยน CurrentSpeed ตามโหลด ณ ตอนก่อนปิด
 
 turnOFF() : void
-ไม่ได้รับ input และทำการเปลี่ยนค่า power เป็น false เมื่อ power นั้นเปิดอยู และไม่มี return ค่า
+ไม่ได้รับ input และทำการเปลี่ยนค่า power เป็น false และทำการเปลี่ยน CurrentSpeed เป็น 0 และไม่มี return ค่า
 
 setSpeed(int) : void 
-ทำการรับ input เป็นที่มี type เป็น int เพื่อเปลี่ยน fanSpeed ตาม input ที่ได้รับเข้ามา และไม่มี return ค่า
+ทำการรับ input เป็นที่มี type เป็น int ที่มาจาก setMode เพื่อเปลี่ยนค่า CurrentSpeed ตาม input ที่ได้รับเข้ามา และไม่มี return ค่า
 
-setMode(int) : void
-ทำการรับ input เป็น int เพื่อทำการเปลี่ยนเป็น mode อื่นตามจำนวน mode ที่มี และไม่มี return ค่า
+setMode(String) : void
+ทำการรับ input เป็น String เพื่อทำการเปลี่ยนเป็น mode อื่นตามจำนวน mode ที่มีแบบ switch case และทำการไป setSpeed ตามโหมด และไม่มี return ค่า
 
-getAirQuality() : int 
-ไม่มีการรับค่า input และมีการ return ค่า AirQuality ณ ตอนนั้นเป็น currentPM ที่เป็น int
+mostPopularModel() : String
+ไม่ได้ทำการรับ input มีการทำงานคือ return ค่า ModelType ที่มีค่า ModelCount ที่มากที่สุดเป็น String
