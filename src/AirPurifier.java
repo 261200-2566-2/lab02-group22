@@ -32,8 +32,11 @@ public class AirPurifier {
         }
     }
     static String MostPopularModel(){
-        int model = Arrays.stream(ModelCount).max().getAsInt();
-        return ModelType[model];
+        if(Arrays.stream(ModelCount).max().isPresent()){
+            int model = Arrays.stream(ModelCount).max().getAsInt()-1;
+            return ModelType[model];
+        }
+        return "We doesn't have MostPopularModel";
     }
     public AirPurifier(String Model, String Brand, String SerialNo, String Color, double PowerCons, double[] Dimension){
         this.Model = Model;
@@ -49,7 +52,6 @@ public class AirPurifier {
             case "Pro Max Plus" : ModelCount[1]++;
         }
     }
-
     public String getMode() {
         return Mode;
     }
